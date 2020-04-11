@@ -1,14 +1,16 @@
 package com.zuking.leetcode;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Created by zuking on 2020/3/24.
  */
-public class Test {
+public class RemoveDuplicates {
     public static int removeDuplicates(int[] nums) {
         if (nums.length == 0) return 0;
+        Arrays.sort(nums);
         //当前值
         int current = nums[0];
         //给数组重新赋值的下标
@@ -24,7 +26,7 @@ public class Test {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{0, 0, 1, 1, 1, 1, 2, 2, 3, 3, 4, 5, 6};
+        int[] nums = new int[]{0, 0, 1, 6, 1, 1, 1, 2, 2, 3, 3, 4, 5, 6};
         int j = removeDuplicates(nums);
         for (int i = 0; i < j; i++) {
             System.out.print("," + nums[i]);

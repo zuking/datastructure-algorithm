@@ -33,8 +33,15 @@ public class MergeSortedList {
         l2.next = l3;
         l4.next = l5;
         l5.next = l6;
-        mergeTwoLists(l1, l4);
-        System.out.println();
+        ListNode node = mergeTwoLists(l1, l4);
+        while (node != null) {
+            if (node.next == null) {
+                System.out.print(node.val);
+                break;
+            } else
+                System.out.print(node.val + "->");
+            node = node.next;
+        }
     }
 
     public static class ListNode {

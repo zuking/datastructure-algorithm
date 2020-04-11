@@ -4,6 +4,7 @@ import java.util.Stack;
 
 /**
  * Created by zuking on 2020/3/29.
+ * 括号匹配
  */
 public class Parentheses {
     public static boolean isValid(String s) {
